@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아워펫-함께 돌보는 반려동물</title>
+</head>
+<script language='javascript'>
+
+
+	var mysql = require('mysql');
+	var connection = mysql.createConnection({
+		host : '127.0.0.1',
+		user : 'root',
+		password : 'new1234'
+	});
+
+	connection.connect();
+	connection.query('ourpet');
+	
+	
+	function id_check(){
+		theForm = document.frm1;
+		var id = theForm.id.value;
+		
+		connection.query('select count(*) from tb_user where id = ?', id);
+		
+	}
+/* 	connection.query('select count(*) from tb_user') */
+	connection.end();
+</script>
+<body>
+	<h1>회원 가입</h1>
+	<FORM name=frm1>
+		<table>
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="id" /> <input type="button"
+					value="중복확인" onclick="id_check()"></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="pw" /></td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인</td>
+				<td><input type="password" name="pw2" /></td>
+			</tr>
+			<tr>
+				<td>이메일주소</td>
+				<td><input type="text" name="email" /></td>
+			</tr>
+			<tr>
+				<td>전화번호</td>
+				<td><input type="text" name="telnum" /></td>
+			</tr>
+			<tr>
+				<td>닉네임</td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr>
+				<td>프로필사진</td>
+				<td><input type="file" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="등록"
+					onclick="location.href='UserData_Insert.java'"></td>
+				<td><input type="button" value="뒤로가기"
+					onclick="location.href='Main.html'"></td>
+			</tr>
+		</table>
+	</FORM>
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+<HTML>
+<HEAD>
+<meta charset="EUC-KR">
+<title>아워펫-함께 돌보는 반려동물</title>
+</HEAD>
+<SCRIPT language="javaScript">
+	function check_onclick() {
+		theForm = document.frm1;
+
+		if (theForm.email.value == "") {
+			alert("E-mail 주소를 입력해주세요");
+			frm1.email.focus();
+		} else if(theForm.pw.value == ""){
+			alert("비밀번호를 입력해주세요.");
+			frm1.pw.focus();
+		}
+	}
+</SCRIPT>
+<BODY>
+	<FORM name=frm1>
+		<table>
+			<tr>
+				<td>이메일</td>
+				<td><input type="text" name="email" /></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="pw" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="로그인" onclick="check_onclick()"></td>
+				<td><input type="button" value="뒤로가기"
+					onclick="location.href='Main.html'"></td>
+			</tr>
+		</table>
+	</FORM>
+
+</BODY>
+</HTML>
