@@ -1,0 +1,69 @@
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StringReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Main {
+	static BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+
+	static StringTokenizer tokens;
+
+	private static int V, E;
+
+	public static void main(String[] args) throws IOException {
+		input = new BufferedReader(new StringReader(src));
+		V = Integer.parseInt(input.readLine());
+		E = Integer.parseInt(input.readLine());
+		int[][] edges = new int[E][2];
+		for (int i = 0; i < E; i++) {
+			tokens = new StringTokenizer(input.readLine());
+			edges[i][0] = Integer.parseInt(tokens.nextToken());
+			edges[i][1] = Integer.parseInt(tokens.nextToken());
+		}
+		solution(V, edges);
+	}
+
+	/**
+	 * 입력 값들은 파라미터로 전달된다.
+	 *
+	 * @param V     총 인원 수(정점의 개수)
+	 * @param edges 사람들간의 관계 정보(간선 정보)
+	 */
+	private static void solution(int V, int[][] edges) {
+		// n: 바이러스에 추가로 감염된 사람의 수
+		int n = 0;
+		// 여기에 알고리즘을 구현하세요.////////////////////////////////////////////////////////
+		int b = 1;
+		n = b;
+		Queue<Integer> queue = new LinkedList<Integer>();
+		queue.add(b);
+
+		int[][] map = new int[V+1][V+1];
+		boolean[] visit;
+		visit = new boolean[V+1];
+
+		visit[b] = true;
+
+		while (!queue.isEmpty()) {
+			b = queue.poll();
+			n++
+//			System.out.println(b + " ");
+
+			for (int i = 1; i < V + 1; i++) {
+				if (map[b][i] == 1 && !visit[i]) {
+					queue.offer(i);
+					visit[i] = true;
+				}
+			}
+		}
+
+		////////////////////////////////////////////////////////////////////////////////////////
+		System.out.println(n);
+	}
+
+	private static String src = "3\r\n" + "2\r\n" + "1 2\r\n" + "1 3";
+}

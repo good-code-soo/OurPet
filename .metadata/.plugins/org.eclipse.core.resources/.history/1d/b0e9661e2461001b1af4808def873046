@@ -1,0 +1,74 @@
+<%@page
+	import="javax.security.auth.message.callback.PrivateKeyCallback.Request"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page pageEncoding="UTF-8" import="java.sql.*" import="java.util.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>아워펫-함께 돌보는 반려동물</title>
+</head>
+<SCRIPT language="javaScript">
+	function id_check(id) {
+		frm = document.reg;
+		if (id == "") {
+			alert("아이디를 입력해 주세요.");
+			frm.id.focus();
+			return;
+		}
+		url = "idCheck.jsp?id=" + id;
+		window.open(url, "IDCheck", "width=300, height=150");
+	}
+	
+	function file_upload(){
+		url="fileUpload.jsp";
+		window.open(url, "FileUpload", "width=350, height=150");
+	}
+
+	function pw_check(pw, p2){
+		frm.pw.focus(); ///submit 부터 진행 필요
+	}
+</script>
+<body>
+	<h1>회원 가입</h1>
+	<form name="reg" method="post" action="UserData/User_Insert.java">
+		<table>
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="id" /><input type="button"
+					name="idcheck" value="중복확인" onclick="id_check(this.form.id.value)" /></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="pw" /></td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인</td>
+				<td><input type="password" name="pw2" onchange="if(pw!=pw2){alert('비밀번호가 다릅니다')"/></td>
+			</tr>
+			<tr>
+				<td>이메일주소</td>
+				<td><input type="text" name="email" /></td>
+			</tr>
+			<tr>
+				<td>전화번호</td>
+				<td><input type="text" name="telnum" /></td>
+			</tr>
+			<tr>
+				<td>닉네임</td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr>
+				<td>프로필사진</td>
+				<td><input type="button"  name="pic" value="파일등록하기" onclick="file_upload()"/></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="등록"
+					onclick="if(pw == '' || pw2== ''){alert('비말번호를 정확하게 입력해주세요.'); pw_check(this.form.pw.value, this.form.pw2.value); return; }else if(pw != pw2){alert('입력한 비밀번호가 다릅니다.'); pw_check(this.form.pw.value, this.form.pw2.value); return;} else{User_Insert();}"></td>
+				<td><input type="button" value="뒤로가기"
+					onclick="location.href='Main.jsp'"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

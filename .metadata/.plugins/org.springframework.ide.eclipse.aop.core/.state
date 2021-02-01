@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="spring06_collection4_props2_util2_bundle"/>
+<aop-project name="spring05_Injection04_setter_exam"/>
+<aop-project name="spring15_AOP_before">
+<aspect-definition advice-class-name="com.aspect.UserServiceBeforeAspect" advice-method-name="sayEchoBefore" advice-type="BEFORE" aspect-end-line-number="12" aspect-name="beforeAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring15_AOP_before/src/main/resources/user.xml" pointcut-expression="execution( * sayEcho(..))" proxy-target-class="false">
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:spring15_AOP_before|3:src/main/resources/user.xml|7:beans:6|8:service:11" bean-file="/spring15_AOP_before/src/main/resources/user.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring15_AOP_before/src/main/resources/user.xml" source="=spring15_AOP_before/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.aspect{UserServiceBeforeAspect.java[UserServiceBeforeAspect~sayEchoBefore" source-start-line="22" target="=spring15_AOP_before/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.service{UserService.java[UserService~sayEcho" target-start-line="11"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.aspect.UserServiceBeforeAspect" advice-method-name="sayEchoBefore2" advice-type="BEFORE" aspect-end-line-number="12" aspect-name="beforeAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring15_AOP_before/src/main/resources/user.xml" pointcut-expression="xxx()" proxy-target-class="false">
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:spring15_AOP_before|3:src/main/resources/user.xml|7:beans:6|8:service:11" bean-file="/spring15_AOP_before/src/main/resources/user.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring15_AOP_before/src/main/resources/user.xml" source="=spring15_AOP_before/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.aspect{UserServiceBeforeAspect.java[UserServiceBeforeAspect~sayEchoBefore2" source-start-line="36" target="=spring15_AOP_before/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.service{UserService.java[UserService~sayEcho" target-start-line="11"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="spring19_mvc6_mybatis"/>
+<aop-project name="spring03_multi"/>
+<aop-project name="spring08_@Autowired"/>
+<aop-project name="spring14_SpEL3_staticmethod"/>
+<aop-project name="spring18_mvc_template"/>
+<aop-project name="spring05_Injection"/>
+<aop-project name="spring14_SpEL2_property_method"/>
+<aop-project name="spring05_Injection02_exam"/>
+<aop-project name="spring09_PropertyPlaceHolder"/>
+<aop-project name="spring07_@Required"/>
+<aop-project name="spring06_collection_list"/>
+<aop-project name="spring19_mvc_template"/>
+<aop-project name="spring06_collection2_set"/>
+<aop-project name="spring19_mvc2_parameter"/>
+<aop-project name="spring08_@Autowired2_requierd"/>
+<aop-project name="spring16_logback"/>
+<aop-project name="spring10_lifecycle_callback2_annotation"/>
+<aop-project name="spring17_Mybatis"/>
+<aop-project name="spring19_mvc5_css_js_image_namespace"/>
+<aop-project name="spring13_@Value"/>
+<aop-project name="spring06_collection3_map"/>
+<aop-project name="spring15_AOP5_around">
+<aspect-definition advice-class-name="com.aspect.UserServiceAfterAroundAspect" advice-method-name="doBasicProfiling(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="12" aspect-name="afterAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring15_AOP5_around/src/main/resources/user.xml" pointcut-expression="execution( * sayEcho(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:spring15_AOP5_around|3:src/main/resources/user.xml|7:beans:6|8:service:11" bean-file="/spring15_AOP5_around/src/main/resources/user.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring15_AOP5_around/src/main/resources/user.xml" source="=spring15_AOP5_around/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.aspect{UserServiceAfterAroundAspect.java[UserServiceAfterAroundAspect~doBasicProfiling~QProceedingJoinPoint;" source-start-line="25" target="=spring15_AOP5_around/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.service{UserService.java[UserService~sayEcho" target-start-line="11"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="spring01_bean"/>
+<aop-project name="spring10_lifecycle_callback2_interface"/>
+<aop-project name="spring05_Injection05_setter_exam2"/>
+<aop-project name="spring15_AOP3_afterReturning">
+<aspect-definition advice-class-name="com.aspect.UserServiceAfterReturningAspect" advice-method-name="sayEchoAfterReturning(java.lang.Object)" advice-type="AFTER_RETURNING" aspect-end-line-number="12" aspect-name="afterAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring15_AOP3_afterReturning/src/main/resources/user.xml" pointcut-expression="execution( * sayEcho(..))" proxy-target-class="false" returning="xxx">
+<aop-reference advice-type="AFTER_RETURNING" bean="1:BeansModel|2:spring15_AOP3_afterReturning|3:src/main/resources/user.xml|7:beans:6|8:service:11" bean-file="/spring15_AOP3_afterReturning/src/main/resources/user.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring15_AOP3_afterReturning/src/main/resources/user.xml" source="=spring15_AOP3_afterReturning/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.aspect{UserServiceAfterReturningAspect.java[UserServiceAfterReturningAspect~sayEchoAfterReturning~QObject;" source-start-line="23" target="=spring15_AOP3_afterReturning/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.service{UserService.java[UserService~sayEcho" target-start-line="11"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="spring05_Injection02_exam2"/>
+<aop-project name="spring19_mvc_@RequestMapping"/>
+<aop-project name="spring02_package"/>
+<aop-project name="spring08_@Autowired4_service_dao_exam"/>
+<aop-project name="spring18_mvc2_basic"/>
+<aop-project name="spring06_collection4_props"/>
+<aop-project name="spring14_SpEL_basic"/>
+<aop-project name="spring10_lifecycle_callback"/>
+<aop-project name="spring15_AOP2_After">
+<aspect-definition advice-class-name="com.aspect.UserServiceAfterAspect" advice-method-name="sayEchoAfter2" advice-type="AFTER" aspect-end-line-number="12" aspect-name="afterAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring15_AOP2_After/src/main/resources/user.xml" pointcut-expression="xxx()" proxy-target-class="false">
+<aop-reference advice-type="AFTER" bean="1:BeansModel|2:spring15_AOP2_After|3:src/main/resources/user.xml|7:beans:6|8:service:11" bean-file="/spring15_AOP2_After/src/main/resources/user.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring15_AOP2_After/src/main/resources/user.xml" source="=spring15_AOP2_After/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.aspect{UserServiceAfterAspect.java[UserServiceAfterAspect~sayEchoAfter2" source-start-line="37" target="=spring15_AOP2_After/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.service{UserService.java[UserService~sayEcho" target-start-line="11"/>
+</aspect-definition>
+<aspect-definition advice-class-name="com.aspect.UserServiceAfterAspect" advice-method-name="sayEchoAfter" advice-type="AFTER" aspect-end-line-number="12" aspect-name="afterAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring15_AOP2_After/src/main/resources/user.xml" pointcut-expression="execution( * sayEcho(..))" proxy-target-class="false">
+<aop-reference advice-type="AFTER" bean="1:BeansModel|2:spring15_AOP2_After|3:src/main/resources/user.xml|7:beans:6|8:service:11" bean-file="/spring15_AOP2_After/src/main/resources/user.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring15_AOP2_After/src/main/resources/user.xml" source="=spring15_AOP2_After/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.aspect{UserServiceAfterAspect.java[UserServiceAfterAspect~sayEchoAfter" source-start-line="23" target="=spring15_AOP2_After/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.service{UserService.java[UserService~sayEcho" target-start-line="11"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="spring04_getBean"/>
+<aop-project name="spring12_scope"/>
+<aop-project name="spring08_@Autowired3_@Quilifier"/>
+<aop-project name="spring05_Injection03_Setter"/>
+<aop-project name="spring11_bean_inheritance"/>
+<aop-project name="spring13_@Value2_bundle2_file"/>
+<aop-project name="spring19_mvc4_redirect_Forward"/>
+<aop-project name="spring15_AOP4_afterThrowing">
+<aspect-definition advice-class-name="com.aspect.UserServiceAfterThrowingAspect" advice-method-name="sayEchoAfterThrowing(java.lang.Exception)" advice-type="AFTER_THROWING" aspect-end-line-number="12" aspect-name="afterAspect" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/spring15_AOP4_afterThrowing/src/main/resources/user.xml" pointcut-expression="execution( * sayEcho(..))" proxy-target-class="false" throwing="ex">
+<aop-reference advice-type="AFTER_THROWING" bean="1:BeansModel|2:spring15_AOP4_afterThrowing|3:src/main/resources/user.xml|7:beans:6|8:service:11" bean-file="/spring15_AOP4_afterThrowing/src/main/resources/user.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/spring15_AOP4_afterThrowing/src/main/resources/user.xml" source="=spring15_AOP4_afterThrowing/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.aspect{UserServiceAfterThrowingAspect.java[UserServiceAfterThrowingAspect~sayEchoAfterThrowing~QException;" source-start-line="23" target="=spring15_AOP4_afterThrowing/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.service{UserService.java[UserService~sayEcho" target-start-line="11"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="spring19_mvc3_model"/>
+<aop-project name="spring14_SpEL4_bundle"/>
+<aop-project name="spring05_Injection01_constructor"/>
+<aop-project name="spring18_mvc3_InternalResourceViewResolver"/>
+<aop-project name="spring13_@Value2_bundle"/>
+</aop-reference-model>

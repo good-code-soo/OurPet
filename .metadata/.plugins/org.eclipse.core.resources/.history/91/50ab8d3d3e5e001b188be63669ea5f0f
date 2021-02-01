@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+<form name="pic" method="post" enctype="multipart/form-data" action="viewPage.jsp">
+<input type="file" name="uploadFile" value="파일찾기"></br>
+<div>(최대 64KB크기의 파일 업로드가 가능합니다.)</div>
+<input type="submit" value="등록하기"></br>
+</form>
+</body>
+</html>

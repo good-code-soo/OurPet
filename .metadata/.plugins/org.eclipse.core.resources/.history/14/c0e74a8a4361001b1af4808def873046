@@ -1,0 +1,78 @@
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StringReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Main {
+	static BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+
+	static StringTokenizer tokens;
+
+	private static int V, E;
+
+	public static void main(String[] args) throws IOException {
+		input = new BufferedReader(new StringReader(src));
+		V = Integer.parseInt(input.readLine());
+		E = Integer.parseInt(input.readLine());
+		int[][] edges = new int[E][2];
+		for (int i = 0; i < E; i++) {
+			tokens = new StringTokenizer(input.readLine());
+			edges[i][0] = Integer.parseInt(tokens.nextToken());
+			edges[i][1] = Integer.parseInt(tokens.nextToken());
+		}
+		solution(V, edges);
+	}
+
+	/**
+	 * 입력 값들은 파라미터로 전달된다.
+	 *
+	 * @param V     총 인원 수(정점의 개수)
+	 * @param edges 사람들간의 관계 정보(간선 정보)
+	 */
+	private static void solution(int V, int[][] edges) {
+		// n: 바이러스에 추가로 감염된 사람의 수
+		int n = 0;
+		// 여기에 알고리즘을 구현하세요.////////////////////////////////////////////////////////
+		int x = 1; // 최초 양성이 1이니까
+		int[][] map = new int[V][2];
+		boolean[] visit = new boolean[V];
+
+		Queue<Integer> q = new LinkedList<>();
+		q.add(x); // queue에 시작점(1) 입력
+		visit[x] = true; // 1은 방문으로 처리
+
+		while (!q.isEmpty()) {
+			int num = q.poll(); // queue에서 맨 처음 값을 뽑기
+			System.out.println(num + " "); // 뽑은값 출력
+
+			for (int i = 0; i < visit.length; i++) { // 정점수를 다 방문할때까지 유지
+				for (int j = 0; j <= 1; j++) { // 이문제의 y축은 0,1만 존재하니까
+					if (map[i][j] == num) {
+						int value = map[i][j];
+						if (visit[value] == false) {// 이미 다녀온 곳이 아니면
+							q.add(value); // 가야할 곳으로 추가
+							visit[value] = true; // 방문여부는 방문으로 저장
+						}
+					}
+				}
+			}
+		}
+		
+		for(int i = 1; i <= V ;i ++) {
+			if(visit[i]) {
+				n++;
+			}
+		}
+		
+		n= n-1; //최초 양상 1은 제외 
+		////////////////////////////////////////////////////////////////////////////////////////
+		System.out.println(n);
+	}
+
+	private static String src = "3\r\n" + "2\r\n" + "1 2\r\n" + "1 3";
+//	private static String src = "7\r\n" + "6\r\n" + "1 2\r\n" + "2 3\r\n" + "1 5\r\n" + "5 2\r\n" + "5 6\r\n" + "4 7";
+}
