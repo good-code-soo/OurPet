@@ -61,7 +61,7 @@
 					onclick="file_upload()" /></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="등록" onclick=""></td>
+				<td><input type="submit" value="등록" onclick="User_Insert()"></td>
 				<td><input type="button" value="뒤로가기"
 					onclick="location.href='Main.jsp'"></td>
 			</tr>
